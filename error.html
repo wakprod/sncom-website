@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre abonnement a expiré</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white; border-radius: 8px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); border-top: 5px solid #3351e6;
+            overflow: hidden;
+            animation: slideDown 0.6s ease-out;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            background: #34495e; padding: 40px 30px; text-align: center; color: white;
+        }
+        .logo { max-width: 150px; height: auto; margin-bottom: 20px; }
+        .company-name { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .icon-expired { font-size: 80px; margin-bottom: 20px; opacity: 0.9; }
+        .content { padding: 40px 30px; text-align: center; }
+        .title { font-size: 28px; font-weight: bold; color: #2c3e50; margin-bottom: 20px; }
+        .message { font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 30px; white-space: pre-line; }
+        .renewal-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 40px;
+            background: #3351e6; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+        }
+        .renewal-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .renewal-btn .emoji { margin-right: 10px; font-size: 22px; }
+        .ad-image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .ad-image-link {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .ad-image-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .ad-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .contact-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .contact-title { font-size: 20px; font-weight: bold; color: #2c3e50; margin-bottom: 20px; }
+        .contact-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+        .btn-whatsapp { background: #25D366; }
+        .btn-phone { background: #3498db; }
+        .btn-email { background: #e74c3c; }
+        .btn-facebook { background: #1877f2; }
+        .contact-btn .emoji { margin-right: 10px; font-size: 20px; }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+            border-top: 1px solid #ecf0f1;
+        }
+        @media (max-width: 600px) {
+            .title { font-size: 24px; }
+            .contact-buttons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="http://waklink.mikhmonpro.com/img/logo-WAKAD.png" alt="Logo" class="logo">
+            <div class="company-name">WAKLINK</div>
+            <div class="icon-expired">🔒</div>
+        </div>
+        <div class="content">
+            <div class="title">Votre abonnement a expiré</div>
+            <div class="message">Votre compte Internet a expiré. Veuillez renouveler votre abonnement pour continuer à profiter de nos services.</div>
+            <div class="contact-section">
+                <div class="contact-title">📞 Contactez-nous pour renouveler</div>
+                <div class="contact-buttons"><a href="tel:+228 97 50 95 85" class="contact-btn btn-phone">
+                    <span class="emoji">📞</span> Appeler
+                </a></div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2025 Waklink Network. Tous droits réservés.
+        </div>
+    </div>
+</body>
+</html>
