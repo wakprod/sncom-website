@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SNCom | Internet Fiable et Stable pour Tous – Liaison radio fiable</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="SNCom propose l’internet fiable et stable à Mango et ses environs. Formules d’installation flexibles, forfaits 5 à 20 Mbps, connexion radio fiable. Appelez-nous !">
+  <meta name="keywords" content="internet Mango, haut débit Togo, SNCom, Savane Net Communication, forfait internet, liaison radio, wifi Mango">
+  <meta name="author" content="Savane Net Communication">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sncom-mango.com/">
+  <meta property="og:title" content="SNCom – Internet Fiable et Stable pour Tous">
+  <meta property="og:description" content="Connectez-vous sans stress et sans gros investissement. Formules adaptées, connexion radio stable.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=630&fit=crop">
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefcf5;
+      color: #1E2A32;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Boutons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #F27C2E;
+      color: white;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .btn-primary:hover {
+      background: #E05F1A;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -8px rgba(242,124,46,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #F27C2E;
+      color: #F27C2E;
+      padding: 10px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline:hover {
+      background: #F27C2E;
+      color: white;
+    }
+
+    /* Header */
+    header {
+      background: #0A2F3F;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .logo span {
+      color: #F27C2E;
+    }
+    .logo p {
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      color: #F27C2E;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0F3B4C 0%, #0A2F3F 100%);
+      color: white;
+      padding: 70px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .hero .highlight {
+      color: #F27C2E;
+      border-bottom: 3px solid #F27C2E;
+      display: inline-block;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #0A2F3F;
+    }
+    .section-sub {
+      text-align: center;
+      color: #5A6E7A;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      font-size: 1.1rem;
+    }
+
+    /* Cartes */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 32px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+      transition: 0.25s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -12px rgba(0,0,0,0.15);
+    }
+    .forfait-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: block;
+      border: 3px solid #FEF1E6;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .price-tag {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0A2F3F;
+      margin: 20px 0 8px;
+    }
+    .feature-list {
+      list-style: none;
+      margin: 20px 0;
+    }
+    .feature-list li {
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+    .feature-list i {
+      color: #F27C2E;
+      width: 22px;
+    }
+    .badge-promo {
+      background: #FEE9D6;
+      color: #E05F1A;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    /* Témoignages */
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 2px solid #F27C2E;
+    }
+    .testimonial-text {
+      font-style: italic;
+      margin: 16px 0;
+      color: #2c3e4f;
+    }
+
+    /* Compteur */
+    .counter-item {
+      text-align: center;
+      background: #fff;
+      padding: 24px;
+      border-radius: 32px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .counter-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #F27C2E;
+    }
+
+    /* Calculateur */
+    .calculator {
+      background: #EFF6FA;
+      border-radius: 32px;
+      padding: 32px;
+      margin-top: 20px;
+    }
+    .calc-result {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0A2F3F;
+      margin-top: 20px;
+    }
+
+    /* FAQ accordéon */
+    .faq-item {
+      background: white;
+      border-radius: 24px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      transition: 0.2s;
+    }
+    .faq-question:hover {
+      background: #f9f9f9;
+    }
+    .faq-answer {
+      padding: 0 24px 20px 24px;
+      display: none;
+      color: #5A6E7A;
+      border-top: 1px solid #E9EDF0;
+    }
+    .faq-answer.active {
+      display: block;
+    }
+
+    /* Contact et formulaire */
+    .contact-block {
+      background: #0A2F3F;
+      color: white;
+      border-radius: 48px;
+      padding: 48px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .contact-info, .contact-form {
+      flex: 1;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 60px;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+      background: white;
+    }
+    /* WhatsApp flottant */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background: #071F29;
+      color: #B0C4D9;
+      text-align: center;
+      padding: 32px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      .navbar {
+        flex-direction: row;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0A2F3F;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .contact-block {
+        flex-direction: column;
+      }
+    }
+    .text-small {
+      font-size: 0.85rem;
+      color: #7F8C96;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>SN<span>Com</span></h1>
+        <p>Savane Net Communication</p>
+      </div>
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#formules">Formules</a></li>
+        <li><a href="#forfaits">Forfaits</a></li>
+        <li><a href="#pourquoi">Pourquoi nous</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+22891592925" class="btn-outline" style="border-color:#F27C2E; color:#F27C2E; padding: 8px 18px;"><i class="fas fa-phone-alt"></i> Appeler</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="container">
+      <h2>INTERNET FIABLE ET STABLE POUR TOUS <span class="highlight">MANGO</span></h2>
+      <p>Fiable • Stable • Accessible <br> Connectez-vous sans stress et sans gros investissement !</p>
+      <div class="hero-buttons">
+        <a href="#formules" class="btn-primary"><i class="fas fa-tachometer-alt"></i> Découvrir nos offres</a>
+        <a href="tel:+22897509585" class="btn-outline" style="background:transparent; border-color:white; color:white;"><i class="fas fa-headset"></i> Appelez-nous</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULES -->
+<section id="formules">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Nos formules d’accès</h2>
+    <p class="section-sub" data-aos="fade-up">Choisissez l’option qui correspond le mieux à vos besoins</p>
+    <div class="cards-grid">
+      <!-- FORMULE 1 - Démarrage facile -->
+      <div class="card" data-aos="zoom-in">
+        <div class="card-icon"><i class="fas fa-gift"></i></div>
+        <span class="badge-promo">🟢 DÉMARRAGE FACILE</span>
+        <h3>Formule 1</h3>
+        <div class="price-tag">Installation gratuite</div>
+        <ul class="feature-list">
+          <li><i class="fas fa-check-circle"></i> 0 FCFA à payer aujourd’hui</li>
+          <li><i class="fas fa-wifi"></i> Équipement fourni et installé</li>
+          <li><i class="fas fa-headset"></i> Assistance et maintenance incluses</li>
+          <li><i class="fas fa-calendar-alt"></i> <strong>10 000 FCFA / mois</strong></li>
+          <li><i class="fas fa-lock"></i> Engagement : 6 mois</li>
+        </ul>
+        <p class="text-small" style="margin-top: 0;">👉 Commencez sans investir et profitez d’une connexion immédiate</p>
+        <a href="tel:+91592925" class="btn-outline" style="width:100%; justify-content:center;"><i class="fas fa-plug"></i> Je me connecte</a>
+      </div>
+
+      <!-- FORMULE 2 - Le meilleur choix -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card-icon"><i class="fas fa-star"></i></div>
+        <span class="badge-promo">⭐ LE MEILLEUR CHOIX</span>
+        <h3>Formule 2</h3>
+        <div class="price-tag">10 000 FCFA</div>
+        <div class="price-small">à l’installation</div>
+        <ul class="feature-list">
+          <li><i class="fas fa-check-circle"></i> Installation à coût réduit</li>
+          <li><i class="fas fa-wifi"></i> Équipement fourni et installé</li>
+          <li><i class="fas fa-headset"></i> Assistance et maintenance incluses</li>
+          <li><i class="fas fa-calendar-alt"></i> <strong>7 000 FCFA / mois</strong></li>
+          <li><i class="fas fa-lock"></i> Engagement : 6 mois</li>
+        </ul>
+        <p class="text-small" style="margin-top: 0;">🔥 Excellent rapport qualité / prix<br>👉 La formule la plus choisie par nos clients</p>
+        <a href="tel:+22897509585" class="btn-outline" style="width:100%; justify-content:center;"><i class="fas fa-hand-holding-usd"></i> Je profite de l’offre</a>
+      </div>
+
+      <!-- FORMULE 3 - Indépendance totale -->
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card-icon"><i class="fas fa-home"></i></div>
+        <h3>Formule 3</h3>
+        <div class="price-tag">55 000 FCFA</div>
+        <div class="price-small">une seule fois</div>
+        <ul class="feature-list">
+          <li><i class="fas fa-check-circle"></i> Installation complète avec équipement personnel</li>
+          <li><i class="fas fa-tools"></i> Équipement installé et vous appartient</li>
+          <li><i class="fas fa-headset"></i> Maintenance sur demande</li>
+          <li><i class="fas fa-file-invoice-dollar"></i> Abonnement selon forfait choisi</li>
+          <li><i class="fas fa-unlock-alt"></i> Sans engagement</li>
+        </ul>
+        <p class="text-small" style="margin-top: 0;">🔥 Idéal pour un usage à long terme en toute liberté</p>
+        <a href="tel:+22891592925" class="btn-outline" style="width:100%; justify-content:center;"><i class="fas fa-chart-line"></i> Demander un devis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Témoignages clients -->
+  <section>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Ils nous font confiance</h2>
+      <div class="cards-grid">
+        <div class="card" data-aos="fade-right">
+          <img class="testimonial-img" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop" alt="Kossi" loading="lazy">
+        <h4>Aîssatou A.</h4>
+          <p class="testimonial-text">"Depuis que j’ai souscrit à SNCom, je peux télétravailler sans coupure. L’installation a été rapide et le service client très réactif !"</p>
+          <i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i>
+        </div>
+        <div class="card" data-aos="fade-up">
+          <img class="testimonial-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Tchaa" loading="lazy">
+        <h4>Tchaa M.</h4>
+          <p class="testimonial-text">"Formule 2 très avantageuse, internet stable même en heure de pointe. Je recommande à tous mes voisins."</p>
+          <i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star-half-alt" style="color:#F27C2E;"></i>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <img class="testimonial-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop" alt="Aïssatou" loading="lazy">
+        <h4>Erica B.</h4>
+          <p class="testimonial-text">"Enfin un opérateur local qui comprend nos besoins. La connexion radio est fiable et le prix est imbattable."</p>
+          <i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i><i class="fas fa-star" style="color:#F27C2E;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compteurs de satisfaction -->
+  <section style="background: #EFF6FA;">
+    <div class="container">
+      <div class="cards-grid">
+        <div class="counter-item" data-aos="zoom-in">
+          <i class="fas fa-users" style="font-size: 2.5rem; color:#F27C2E;"></i>
+          <div class="counter-number" id="counterClients">0</div>
+          <p>Clients satisfaits</p>
+        </div>
+        <div class="counter-item" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-calendar-check" style="font-size: 2.5rem; color:#F27C2E;"></i>
+          <div class="counter-number" id="counterInstall">0</div>
+          <p>Installations réalisées</p>
+        </div>
+        <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-smile" style="font-size: 2.5rem; color:#F27C2E;"></i>
+          <div class="counter-number" id="counterSatisfaction">0</div>
+          <p>% de satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculateur de coût -->
+  <section>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Simulez votre coût</h2>
+      <div class="calculator" data-aos="fade-up">
+        <div class="form-group">
+          <label>Formule d’accès :</label>
+          <select id="calcFormula">
+            <option value="0">Formule 1 – Installation gratuite</option>
+            <option value="15000">Formule 2 – Frais réduits (15 000 FCFA)</option>
+            <option value="55000">Formule 3 – Installation classique (55 000 FCFA)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Forfait mensuel :</label>
+          <select id="calcPackage">
+            <option value="5000">5 Mbps – 5 000 FCFA/mois</option>
+            <option value="8500">10 Mbps – 8 500 FCFA/mois</option>
+            <option value="11500">20 Mbps – 11 500 FCFA/mois</option>
+          </select>
+        </div>
+        <div class="calc-result">
+          Coût total (6 mois) : <span id="total6">0</span> FCFA<br>
+          Coût total (1 an) : <span id="total12">0</span> FCFA
+        </div>
+        <p class="text-small">*Hors frais d’entrée pour Formule 1 (0 FCFA). Les tarifs promotionnels des 6 premiers mois sont déjà intégrés dans les formules 1 et 2.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background: #F9F7F0;">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Foire aux questions</h2>
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">Quels sont les frais d’installation ? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Nous proposons trois formules : Formule 1 (gratuite), Formule 2 (15 000 FCFA d’entrée) et Formule 3 (55 000 FCFA). Les détails sont dans la section Formules.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">La connexion est-elle stable ? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Oui, nous utilisons une liaison radio haut débit avec des équipements professionnels. La couverture est optimisée pour Mango et ses alentours.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">Puis-je résilier à tout moment ? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Absolument, nos offres sont sans engagement. Vous êtes libre de résilier avec un préavis d’un mois.</div>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">Quelle est la zone couverte exactement ? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Nous couvrons Mango et les villages environnants. Contactez-nous pour vérifier l’éligibilité de votre adresse.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carte interactive -->
+  <section>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Zone couverte</h2>
+      <div data-aos="fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63392.44833102111!2d0.469867577074249!3d10.359851675751884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102a4e2ea2dbccd3%3A0x3e1c8e5c6e7e8f9a!2sMango%2C%20Togo!5e0!3m2!1sfr!2sfr!4v1711987654321!5m2!1sfr!2sfr" width="100%" height="400" style="border:0; border-radius: 32px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="text-small" style="text-align:center; margin-top:16px;">Notre réseau couvre Mango et les zones rurales environnantes. N’hésitez pas à nous contacter pour plus de précisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + formulaire sécurisé -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-block" data-aos="fade-up">
+        <div class="contact-info">
+          <h3><i class="fas fa-headset"></i> Prêt à basculer vers le haut débit ?</h3>
+          <p>Appelez-nous dès maintenant pour une offre personnalisée ou une visite technique.</p>
+          <div class="phone-numbers" style="font-size:1.4rem; margin:20px 0;">
+            <a href="tel:+22891592925" style="color:#F27C2E; text-decoration:none;">91 59 29 25</a>  |  
+            <a href="tel:+22897509585" style="color:#F27C2E; text-decoration:none;">9750 95 85</a>
+          </div>
+          <a href="https://wa.me/22891592925?text=Bonjour%20SNCom%2C%20je%20souhaite%20souscrire" class="btn-primary" style="background:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp Business</a>
+          <p style="margin-top:20px;"><i class="fas fa-envelope"></i> contact@sncom-mango.com</p>
+          <p><i class="fas fa-globe"></i> www.sncom-mango.com</p>
+        </div>
+
+        <div class="contact-form">
+          <h3>Demande de souscription</h3>
+          <form action="https://formspree.io/f/mnjozrod" method="POST">
+            <input type="hidden" name="antispam_token" value="Nouvelle demande SNCom">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Nom complet" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Téléphone" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="E-mail (optionnel)">
+            </div>
+            <div class="form-group">
+              <select name="formula" required>
+                <option value="">Formule d’accès</option>
+                <option value="formule1">Formule 1 – Installation gratuite</option>
+                <option value="formule2">Formule 2 – Frais réduits 15 000 FCFA</option>
+                <option value="formule3">Formule 3 – Installation classique</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select name="package">
+                <option value="">Forfait souhaité (optionnel)</option>
+                <option value="5mbps">5 Mbps – 5 000 FCFA/mois</option>
+                <option value="10mbps">10 Mbps – 8 500 FCFA/mois</option>
+                <option value="20mbps">20 Mbps – 11 500 FCFA/mois</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Envoyer la demande</button>
+            <p class="text-small" style="color:#ccc; margin-top:12px;">Nos conseillers vous recontacteront sous 24h.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Savane Net Communication (SNCom) — Internet Haut Débit à Mango et environs. Tous droits réservés.</p>
+    <p style="margin-top: 12px;">Rapide • Stable • Accessible — Faites confiance à l'expert local (liaison radio)</p>
+  </div>
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/22891592925?text=Bonjour%20SNCom%2C%20je%20souhaite%20souscrire" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialisation AOS
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+
+  // Menu mobile
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+    });
+  });
+
+  // FAQ accordéon
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    question.addEventListener('click', () => {
+      const isActive = answer.classList.contains('active');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+      if (!isActive) answer.classList.add('active');
+    });
+  });
+
+  // Calculateur de coût
+  const calcFormula = document.getElementById('calcFormula');
+  const calcPackage = document.getElementById('calcPackage');
+  const total6Span = document.getElementById('total6');
+  const total12Span = document.getElementById('total12');
+
+  function updateCalculator() {
+    let formulaCost = parseInt(calcFormula.value) || 0;
+    let monthlyCost = parseInt(calcPackage.value) || 0;
+    // Pour les 6 premiers mois, les formules 1 et 2 ont des tarifs promo mais ici on simplifie :
+    // Formule1 : 10 000/mois pendant 6 mois au lieu du forfait normal
+    // Formule2 : 7 000/mois pendant 6 mois
+    // Formule3 : tarif normal du forfait
+    let promo6 = false;
+    let promoMonthly = monthlyCost;
+    if (calcFormula.value === "0") { // Formule 1
+      promo6 = true;
+      promoMonthly = 10000;
+    } else if (calcFormula.value === "15000") { // Formule 2
+      promo6 = true;
+      promoMonthly = 7000;
+    }
+    let total6 = formulaCost + (promo6 ? promoMonthly * 6 : monthlyCost * 6);
+    let total12 = formulaCost + (promo6 ? (promoMonthly * 6) + (monthlyCost * 6) : monthlyCost * 12);
+    total6Span.innerText = total6.toLocaleString();
+    total12Span.innerText = total12.toLocaleString();
+  }
+  calcFormula.addEventListener('change', updateCalculator);
+  calcPackage.addEventListener('change', updateCalculator);
+  updateCalculator();
+
+  // Compteurs animés
+  function animateCounter(element, target, suffix = '') {
+    let current = 0;
+    const increment = Math.ceil(target / 50);
+    const interval = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(interval);
+      }
+      element.innerText = current + suffix;
+    }, 30);
+  }
+  // Les valeurs (exemples)
+  const clientCount = 542;
+  const installCount = 498;
+  const satisfaction = 98;
+  const counterClients = document.getElementById('counterClients');
+  const counterInstall = document.getElementById('counterInstall');
+  const counterSatisfaction = document.getElementById('counterSatisfaction');
+  // Observer pour démarrer l'animation au scroll
+  const observerOptions = { threshold: 0.5 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.id === 'counterClients') animateCounter(counterClients, clientCount);
+        if (entry.target.id === 'counterInstall') animateCounter(counterInstall, installCount);
+        if (entry.target.id === 'counterSatisfaction') animateCounter(counterSatisfaction, satisfaction, '%');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  observer.observe(counterClients);
+  observer.observe(counterInstall);
+  observer.observe(counterSatisfaction);
+
+  // Validation simple du formulaire côté client
+  const form = document.getElementById('subscriptionForm');
+  form.addEventListener('submit', function(e) {
+    const name = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const formula = form.querySelector('[name="formula"]').value;
+    if (!name || !phone || !formula) {
+      e.preventDefault();
+      alert('Veuillez remplir tous les champs obligatoires (Nom, Téléphone, Formule).');
+    }
+  });
+</script>
+</body>
+</html>
